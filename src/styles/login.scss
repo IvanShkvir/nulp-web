@@ -1,0 +1,78 @@
+@import "main";
+
+.round-with-shadow {
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0 0 45px 3px #999;
+}
+
+@include a-in-btn;
+
+.form-box {
+  height: 350px;
+  width: 350px;
+  position: relative;
+  margin: 7.5% auto;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.toggle-box {
+  height: 40px;
+  width: 250px;
+  margin: 20px auto;
+  box-shadow: 0 0 20px 5px $Gargoyle-Gas-shadow;
+  border-radius: 30px;
+  position: relative;
+}
+
+.toggle-btn {
+  height: 100%;
+  width: 49%;
+  box-shadow: none;
+  cursor: pointer;
+  background: transparent;
+  position: relative;
+  outline: 0;
+
+  &:first-child {
+    background: $Gargoyle-Gas;
+  }
+
+  &:last-child:hover {
+    background: $Portland-Orange;
+  }
+}
+
+.input-group {
+  position: relative;
+  width: 250px;
+  margin: 60px auto;
+}
+
+.input-field {
+  position: relative;
+  width: 100%;
+  height: 50px;
+
+  margin: 0 0 10px 0;
+  padding: 0 0 0 10px;
+}
+
+.input-checkbox {
+  margin-right: 10px;
+}
+
+.submit-btn {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin-top: 10px;
+
+  background-color: $Gargoyle-Gas;
+
+  &:hover {
+    background-color: $Portland-Orange;
+  }
+}

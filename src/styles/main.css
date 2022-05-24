@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.background {
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("https://images.hdqwalls.com/download/ultimate-supercars-k6-1920x1080.jpg");
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  background-color: #FFD942;
+  opacity: 0.8;
+}
+header .left-part {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+header .right-part {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+header a {
+  display: inline-block;
+  height: 100%;
+  padding: 0 20px 0 20px;
+  text-decoration: none;
+  color: black;
+  vertical-align: middle;
+}
+header a:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+header a:first-child {
+  padding: 0 10px 0 10px;
+}
+header a:last-child {
+  margin-right: 10px;
+}
+header a:hover {
+  background-color: #FFA442;
+  border: 1px solid black;
+}
+
+/*# sourceMappingURL=main.css.map */
