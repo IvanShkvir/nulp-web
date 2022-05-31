@@ -14,21 +14,22 @@
         </div>
         <div class="right-part">
             <a href="profile.html" class="profile">Profile</a>
-            <a href="login.html" class="logout">Logout</a>
+            <a class="logout">Logout</a>
         </div>
     </header>
     <div class="form-box">
-        <h1><em>Ivan Shkvir</em></h1>
+        <h1 class="name-title"><em>Profile</em></h1>
         <form class="input-group">
-            <input type="text" class="round-with-shadow input-field" placeholder="New name">
-            <input type="text" class="round-with-shadow input-field" placeholder="New surname">
-            <input type="text" class="round-with-shadow input-field" placeholder="New mail">
-            <input type="text" class="round-with-shadow input-field" placeholder="Old password" required>
-            <input type="text" class="round-with-shadow input-field" placeholder="New password" required>
-            <input type="text" class="round-with-shadow input-field" placeholder="Repeat password" required>
+            <input id="name" type="text" class="round-with-shadow input-field" placeholder="Name">
+            <input id="surname" type="text" class="round-with-shadow input-field" placeholder="Surname">
+            <input id="username" type="text" class="round-with-shadow input-field" placeholder="Username">
+            <input id="npassword" type="text" class="round-with-shadow input-field" placeholder="New password" required>
+            <input id="rpassword" type="text" class="round-with-shadow input-field" placeholder="Repeat password" required>
             <button type="submit" class="btn round-with-shadow submit-btn"><a href="">Change user</a></button>
         </form>
     </div>
 </div>
+
+<script type="module" src="../scripts/profile.js"></script>
 </body>
 </html>
