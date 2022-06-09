@@ -1,0 +1,5 @@
+<div class='container'>
+  <app-car *ngFor='let elem of carAndOrders' [car]='elem.car' [order]='elem.order'
+  (deleteOrderEvent)='onDelete($event)'
+  ></app-car>
+</div>

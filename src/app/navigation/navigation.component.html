@@ -1,0 +1,10 @@
+<div *ngIf="getUserCookie()" class='wrapper'>
+  <div class="left-part">
+    <img src='assets/images/icons8-home.svg' alt='' routerLink='home'>
+    <p routerLink=''>Cars</p>
+  </div>
+  <div class="right-part">
+    <p routerLink='profile'>Profile</p>
+    <p (click)='logOut()'>Logout</p>
+  </div>
+</div>

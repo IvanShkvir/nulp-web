@@ -1,0 +1,26 @@
+<div class='card' *ngIf='car'>
+  <img src='{{car.image}}' alt=''>
+  <p>brand: {{car.brand}}</p>
+  <p>model : {{car.model}}</p>
+  <span>Status: {{car.status}}</span>
+
+  <button mat-flat-button (click)='openRentWindow(car)'
+          color='primary'
+          *ngIf='!isOrderMod()'
+  >Орендувати
+  </button>
+
+  <div *ngIf='isOrderMod()'>
+    <button mat-flat-button (click)='openRentWindow(car)'
+            color='primary'
+    >Редагувати
+    </button>
+
+    <button mat-flat-button (click)='removeOrder(order)'
+            color='warn'
+    >Видалити ордер
+    </button>
+  </div>
+
+
+</div>
