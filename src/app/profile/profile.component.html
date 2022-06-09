@@ -1,0 +1,26 @@
+<div class='wrapper'>
+  <div class='form-box'>
+    <form class='input-group' [formGroup]='profileForm'>
+      <input type='text' class='round-with-shadow input-field' placeholder='Name' formControlName='name'>
+      <span class='mat-error'
+            *ngIf="profileForm.get('name')?.invalid && profileForm.get('name')?.touched">Це поле не може бути пустим</span>
+      <input type='text' class='round-with-shadow input-field' placeholder='Surname' formControlName='second_name'>
+      <span class='mat-error'
+            *ngIf="profileForm.get('second_name')?.invalid && profileForm.get('second_name')?.touched">Це поле не може бути пустим</span>
+      <input type='password' class='round-with-shadow input-field' placeholder='Password' formControlName='password'>
+      <span class='mat-error'
+            *ngIf="profileForm.get('password')?.invalid && profileForm.get('password')?.touched">Це поле повинно містити мінімум 8 символів</span>
+      <input type='password' class='round-with-shadow input-field' placeholder='Repeat password'
+             formControlName='repeat_password'>
+      <span class='mat-error' *ngIf='!isPasswordsEqual'>
+            Паролі повинні співпадати!!!
+      </span>
+      <button class='btn round-with-shadow'
+              mat-flat-button
+              color='accent'
+              [disabled]='profileForm.invalid'
+              (click)='updateProfile()'>Update
+      </button>
+    </form>
+  </div>
+</div>

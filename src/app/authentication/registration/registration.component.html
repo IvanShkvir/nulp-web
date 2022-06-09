@@ -1,0 +1,44 @@
+<div class='wrapper'>
+  <div class='form-box'>
+    <div class='toggle-box'>
+      <button
+        type='button'
+        class='btn round-with-shadow toggle-btn unselected-btn'
+        routerLink='/login'
+      >Sign in
+      </button>
+      <button
+        type='button'
+        class='btn round-with-shadow toggle-btn selected-btn'
+        routerLink='/registration'
+      >Sign up
+      </button>
+    </div>
+    <form class='input-group' [formGroup]='registrationForm'>
+      <input type='text' class='round-with-shadow input-field' placeholder='Username' formControlName='username'>
+      <span class='mat-error'
+            *ngIf="registrationForm.get('username')?.invalid && registrationForm.get('username')?.touched">This field can't be empty</span>
+      <input type='text' class='round-with-shadow input-field' placeholder='Name' formControlName='name'>
+      <span class='mat-error'
+            *ngIf="registrationForm.get('name')?.invalid && registrationForm.get('name')?.touched">This field can't be empty</span>
+      <input type='text' class='round-with-shadow input-field' placeholder='Surname' formControlName='second_name'>
+      <span class='mat-error'
+            *ngIf="registrationForm.get('second_name')?.invalid && registrationForm.get('second_name')?.touched">This field can't be empty</span>
+      <input type='password' class='round-with-shadow input-field' placeholder='Password' formControlName='password'>
+      <span class='mat-error'
+            *ngIf="registrationForm.get('password')?.invalid && registrationForm.get('password')?.touched">At least 8 characters</span>
+      <input type='password' class='round-with-shadow input-field' placeholder='Repeat password'
+             formControlName='repeat_password'>
+      <span class='mat-error' *ngIf='!isPasswordsEqual'>
+            Passwords don't match
+      </span>
+      <button class='btn round-with-shadow'
+              mat-flat-button
+              color='accent'
+              [disabled]='registrationForm.invalid'
+              (click)='registration()'>Register
+      </button>
+    </form>
+  </div>
+</div>
+

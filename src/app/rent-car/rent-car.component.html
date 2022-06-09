@@ -1,0 +1,31 @@
+<div class="card" >
+  <img src='{{data.car?.image}}' alt=''>
+  <p>brand: {{data.car?.brand}}</p>
+  <p>model : {{data.car?.model}}</p>
+  <span>Status: {{data.car?.status}}</span>
+  <div>
+    Виберіть до якої дати ви хочете орендувати автомобіль:
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Choose a date</mat-label>
+      <input matInput [matDatepickerFilter]="myFilter"
+             (dateInput)='setDate($event)'
+             [matDatepicker]="picker">
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </div>
+  <button mat-flat-button
+          color='primary'
+          *ngIf='!isUpdateView()'
+          [disabled]='!date'
+          (click)='rentCar()'
+  >Орендувати</button>
+
+  <button mat-flat-button
+          color='primary'
+          *ngIf='isUpdateView()'
+          [disabled]='!date'
+          (click)='rentCar()'
+  >Редагувати</button>
+</div>

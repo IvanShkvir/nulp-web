@@ -1,0 +1,29 @@
+<div class='wrapper'>
+  <div class='form-box'>
+    <div class='toggle-box'>
+      <button type='button' class='btn round-with-shadow toggle-btn selected-btn' routerLink='/login'>Sign in
+      </button>
+      <button type='button' class='btn round-with-shadow toggle-btn unselected-btn' routerLink='/registration'>Sign
+        up
+      </button>
+    </div>
+    <form class='input-group' [formGroup]='loginForm'>
+      <input type='text' class='round-with-shadow input-field' placeholder='Username' formControlName='username'>
+      <span class='mat-error'
+            *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.touched">This field can't be empty</span>
+      <input type='password' class='round-with-shadow input-field' placeholder='User password'
+             formControlName='password'>
+      <span class='mat-error'
+            *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">At least 8 characters
+      </span>
+      <button class='btn round-with-shadow'
+              mat-flat-button
+              color='accent'
+              [disabled]='loginForm.invalid'
+              (click)='login()'>Log in
+      </button>
+    </form>
+  </div>
+</div>
+
+
